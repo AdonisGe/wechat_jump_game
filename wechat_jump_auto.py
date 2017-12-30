@@ -44,7 +44,9 @@ def backup_screenshot(ts):
     dir_path = 'screenshot_backups/'
     if not os.path.isdir(dir_path):
         os.mkdir(dir_path)
-    os.system('cp 1.png {}{}.png'.format(dir_path, ts))
+    cmd = 'cp 1.png {}{}.png'.format(dir_path, ts)
+    print(cmd)
+    os.system(cmd)
 
 
 def jump(distance):
